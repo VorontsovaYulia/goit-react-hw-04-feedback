@@ -12,25 +12,24 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-}
+};
 
 button {
     margin: 0 10px;
     display: inline-block;
-}
+};
 
 button:hover{
     background-color: #999;
     color: #ffcc00;
-}
+};
 
 :first-letter{
     text-transform: uppercase;
-}
+};
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+};
 `

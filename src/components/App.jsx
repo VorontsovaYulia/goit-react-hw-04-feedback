@@ -27,32 +27,32 @@ export const App = () => {
   };
 
   const countTotalFeedback = () => {
-    return good + neutral + bad 
-  }; 
+    return good + neutral + bad
+  };
 
   const countPositiveFeedbackPercentage = () => {
-    return Math.ceil((good/countTotalFeedback())*100)
+    return Math.ceil((good / countTotalFeedback()) * 100)
   };
 
   return (
-  <>
-    <Section title="Please leave feedback">
-      <FeedbackOptions options={{good, neutral, bad}} onLeaveFeedback={handleClick}/>
-    </Section>
-    <Section title="Statistics">
-      {countTotalFeedback() ? 
+    <>
+      <Section title="Please leave feedback">
+        <FeedbackOptions options={{ good, neutral, bad }} onLeaveFeedback={handleClick} />
+      </Section>
+      <Section title="Statistics">
+        {countTotalFeedback() ?
           <Statistics
             good={good}
             neutral={neutral}
             bad={bad}
             total={countTotalFeedback()}
             positivePercentage={Number.isNaN(countPositiveFeedbackPercentage()) ? 0 : countPositiveFeedbackPercentage()} /> :
-      <Notification message="There is no feedback"/>}  
-    </Section>
-    <GlobalStyle />
-  </>
- );
-}
+          <Notification message="There is no feedback" />}
+      </Section>
+      <GlobalStyle />
+    </>
+  );
+};
 
 
 
